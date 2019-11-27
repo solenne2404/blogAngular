@@ -1,0 +1,5 @@
+<ul>
+    <app-post-list-item *ngFor='let post of postsList' 
+                        [postTitle]="post.title"
+                        [postContent]="post.content" ></app-post-list-item>
+</ul>
