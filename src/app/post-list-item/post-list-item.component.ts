@@ -10,10 +10,21 @@ export class PostListItemComponent implements OnInit {
   @Input() postTitle: string;
   @Input() postContent: string;
   @Input() postCreatedat: Date;
+  @Input() loveIts : number;
 
   constructor() { }
 
   ngOnInit() {
+
   }
 
+  onLove() {
+    this.loveIts ++;
+    return this.loveIts;
+  }
+
+  onDontLove(){
+    this.loveIts --;
+    return this.loveIts;
+  }
 }

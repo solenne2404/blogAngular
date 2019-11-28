@@ -1,5 +1,7 @@
-<ul>
+<ul class="d-flex flex-column justify-content-center align-items-center">
     <app-post-list-item *ngFor='let post of postsList' 
                         [postTitle]="post.title"
-                        [postContent]="post.content" ></app-post-list-item>
+                        [postContent]="post.content"
+                        [loveIts]="post.loveIts"
+                        [postCreatedat]="post.created_at" ></app-post-list-item>
 </ul>
