@@ -33,7 +33,7 @@ onSubmit() {
   const password = this.signInForm.get('password').value;
   this.authService.SignInUser(email, password).then(
     ()=> {
-      this.router.navigate(['/books']);
+      this.router.navigate(['/posts']);
     },
     (error) => {
       this.errorMessage = error;
