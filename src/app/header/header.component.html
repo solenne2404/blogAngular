@@ -1,12 +1,18 @@
 <nav class="navbar navbar-dark bg-dark" >
   <div class="navbar-collapse ">
     <ul class="nav nav-tabs d-flex flex-row ">
-      <li class="nav-item mr-auto"  
-          routerLinkActive="active">
-          <a class="nav-link text-decoration-none text-light" 
-            routerLink="posts">Mes articles</a>
-      </li>
-      
+      <div class="d-inline-flex mr-auto">
+        <li class="nav-item "  
+            routerLinkActive="active">
+            <a class="nav-link text-decoration-none text-light" 
+              routerLink="posts">Mes articles</a>
+        </li>
+        <li class="nav-item"  
+            routerLinkActive="active" *ngIf="isAuth">
+            <a class="nav-link text-decoration-none text-light" 
+              routerLink="posts/new">Ajouter un Article</a>
+        </li>
+      </div>
       <li class="nav-item"  
           routerLinkActive="active" *ngIf="!isAuth">
           <a class="nav-link text-decoration-none text-light" 
