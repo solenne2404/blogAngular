@@ -60,5 +60,11 @@ export class PostsService {
     this.savePosts();
     this.emitPosts();
   }
+  postLoveCompte(id: number, point: number) {
+    this.posts[id].loveIts += point;
+    this.savePosts();
+    this.emitPosts();
+  }
+  
   
 }

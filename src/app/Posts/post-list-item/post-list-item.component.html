@@ -1,14 +1,19 @@
-<li [ngClass]="{'list-group-item m-3' : true,
+<button [ngClass]="{'list-group-item border border-dark my-4 col' : true,
+                    'list-group-item-success ' : loveIts > 0,
+                    'list-group-item-danger ' : loveIts < 0}"
+        (click)="onViewPost(i)">
+    <h4> {{postTitle}} </h4>            
+    <p> Mis en ligne le {{postCreatedat}}</p>
+
+</button>
+
+
+<!-- <li [ngClass]="{'list-group-item m-3' : true,
 'list-group-item-success ' : loveIts > 0,
 'list-group-item-danger ' : loveIts < 0}">
-    <p class="float-right">{{postCreatedat | date:'EEEE d MM yyyy'}}</p>
+    <p class="float-right">{{ postCreatedat }}</p>
     <h4 class="h4">{{postTitle}}</h4>
     
     <p class="text-justify">{{postContent}}</p>
-    <div class="container d-flex flex-row justify-content-center">
-        <button class = "btn btn-success mx-5" 
-                (click) = "onLove()" >J'aime!</button>
-        <button class = "btn btn-danger mx-5"
-                (click) = "onDontLove()" >Euuurk...</button>
-    </div>
-</li>
+
+</li> -->
