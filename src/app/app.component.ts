@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { isDate } from 'util';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-root',
@@ -27,4 +28,18 @@ export class AppComponent {
       created_at: new Date(2019,3,5)
     } 
   ];
+
+    constructor() {
+      const firebaseConfig = {
+        apiKey: "AIzaSyBg4JVYbJPt3svXR8Ni0PLt0-Osk2YNETQ",
+        authDomain: "blogangular-d29f8.firebaseapp.com",
+        databaseURL: "https://blogangular-d29f8.firebaseio.com",
+        projectId: "blogangular-d29f8",
+        storageBucket: "blogangular-d29f8.appspot.com",
+        messagingSenderId: "751993273005",
+        appId: "1:751993273005:web:722c9011dc1153ad77e424",
+        measurementId: "G-GQBWYGC0ZZ"
+      };
+      firebase.initializeApp(firebaseConfig);
+    }
 }
